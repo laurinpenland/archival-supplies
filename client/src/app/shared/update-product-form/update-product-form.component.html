@@ -1,0 +1,52 @@
+<div class= "wrapper">
+<h2>Update product details</h2>
+<div [formGroup]="updateProductForm">
+  <mat-form-field appearance="outline">
+      <mat-label>Vendor</mat-label>
+      <input matInput formControlName = "productVendor" [(ngModel)]="product.vendor">
+      <mat-hint>Required</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+      <mat-label>Product Number</mat-label>
+      <input matInput placeholder="product number" formControlName = "productNum" [(ngModel)]="product.productNum">
+      <mat-hint>Required</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="product description" formControlName = "description" [(ngModel)]="product.description">
+      <mat-hint>Required, include dimensions</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+      <mat-label>Pack quantity</mat-label>
+      <input matInput placeholder="pack quanitity" formControlName = "packQuantity" [(ngModel)]="product.packQuantity">
+      <mat-hint>Required, how many items per pack</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Product Types</mat-label>
+      <!--<mat-select [(value)]="selected" [(ngModel)]="product.productType">-->
+      <mat-select [(value)]="product.productType">
+        <mat-option value="Boxes">Boxes</mat-option>
+        <mat-option value="Envelopes">Envelopes</mat-option>
+        <mat-option value="Film">Film</mat-option>
+        <mat-option value="Folders">Folders</mat-option>
+        <mat-option value="Mylar">Mylar</mat-option>
+        <mat-option value="Photo">Photo</mat-option>
+        <mat-option value="Other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Notes</mat-label>
+        <textarea matInput placeholder="special notes about this product" formControlName = "notes" [(ngModel)]="product.notes"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Product website</mat-label>
+        <input type= "url" matInput placeholder="product website url" formControlName = "productUrl" [(ngModel)]="product.productUrl">
+        <mat-hint>Required</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Product image</mat-label>
+        <input type= "url" matInput placeholder="product image url" formControlName = "imageUrl" [(ngModel)]="product.imageUrl">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="updateForm()">Submit Changes</button>
+</div>
+</div>

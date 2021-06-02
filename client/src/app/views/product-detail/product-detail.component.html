@@ -1,0 +1,12 @@
+<div class="wrapper">
+<div class="details">
+<app-product-card [product]="product"></app-product-card>
+<h3>Product Number: {{product.productNum}}</h3>
+<h3>Pack Quantity: {{product.packQuantity}}</h3>
+<p *ngIf="product.notes?.length > 0" >Note: {{product.notes}}</p>
+<button mat-raised-button color="warn" (click)="deleteProduct()">Delete</button>
+</div>
+<div class="update">
+<app-update-product-form [product]="product"></app-update-product-form>
+</div>
+</div>

@@ -1,0 +1,51 @@
+<div class= "wrapper">
+<h2>Add a product</h2>
+<div [formGroup]="addProductForm">
+  <mat-form-field appearance="outline">
+      <mat-label>Vendor</mat-label>
+      <input matInput placeholder="vendor name" formControlName = "productVendor">
+      <mat-hint>Required</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+      <mat-label>Product Number</mat-label>
+      <input matInput placeholder="product number" formControlName = "productNum">
+      <mat-hint>Required</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="product description" formControlName = "description">
+      <mat-hint>Required, include dimensions</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+      <mat-label>Pack quantity</mat-label>
+      <input matInput placeholder="pack quanitity" formControlName = "packQuantity">
+      <mat-hint>Required, how many items per pack</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Product Types</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option value="Boxes">Boxes</mat-option>
+        <mat-option value="Envelopes">Envelopes</mat-option>
+        <mat-option value="Film">Film</mat-option>
+        <mat-option value="Folders">Folders</mat-option>
+        <mat-option value="Mylar">Mylar</mat-option>
+        <mat-option value="Photo">Photo</mat-option>
+        <mat-option value="Other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Notes</mat-label>
+        <textarea matInput placeholder="special notes about this product" formControlName = "notes"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Product website</mat-label>
+        <input type= "url" matInput placeholder="product website url" formControlName = "productUrl">
+        <mat-hint>Required</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Product image</mat-label>
+        <input type= "url" matInput placeholder="product image url" formControlName = "imageUrl">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="submitForm()">Submit</button>
+</div>
+</div>

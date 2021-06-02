@@ -1,0 +1,46 @@
+<div class="container" *ngIf="products?.length > 0">
+
+
+  <h2>Boxes</h2>
+  <div *ngFor="let product of products" class="container-flex">
+    <app-product-card [product]="product" *ngIf="(product.productType == 'Boxes')"></app-product-card>
+  </div>
+  <hr>
+
+  <h2>Envelopes</h2>
+  <div *ngFor="let product of products" class="container-flex">
+    <app-product-card [product]="product" *ngIf="(product.productType == 'Envelopes')"></app-product-card>
+  </div>
+  <hr>
+
+  <h2>Film</h2>
+  <div *ngFor="let product of products" class="container-flex">
+    <app-product-card [product]="product" *ngIf="(product.productType == 'Film')"></app-product-card>
+  </div>
+  <hr>
+
+  <h2>Folders</h2>
+  <div *ngFor="let product of products" class="container-flex">
+    <app-product-card [product]="product" *ngIf="(product.productType == 'Folders')"></app-product-card>
+  </div>
+  <hr>
+
+  <h2>Mylar</h2>
+  <div *ngFor="let product of products" class="container-flex">
+    <app-product-card [product]="product" *ngIf="(product.productType == 'Mylar')"></app-product-card>
+  </div>
+  <hr>
+
+  <h2>Photos</h2>
+  <div *ngFor="let product of products" class="container-flex">
+    <app-product-card [product]="product" *ngIf="(product.productType == 'Photos')"></app-product-card>
+  </div>
+  <hr>
+
+  <h2>Other</h2>
+  <div *ngFor="let product of products" class="container-flex">
+    <app-product-card [product]="product" *ngIf="(product.productType == 'Other')"></app-product-card>
+  </div>
+  <hr>
+
+</div>

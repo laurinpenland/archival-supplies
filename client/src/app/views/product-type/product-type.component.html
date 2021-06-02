@@ -1,0 +1,6 @@
+<h2>{{productType.toUpperCase()}}</h2>
+<div *ngFor="let product of products" class="container-flex">
+  <app-product-card [product]="product" *ngIf="(product.productType.toLowerCase() == productType)"></app-product-card>
+
+</div>
+<hr>

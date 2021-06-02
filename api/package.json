@@ -1,0 +1,15 @@
+{
+  "name": "api-archival-products",
+  "version": "1.0.0",
+  "description": "api for archival products prject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laurin Penland",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.6"
+  }
+}

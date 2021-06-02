@@ -1,0 +1,21 @@
+
+
+
+<mat-card class="example-card boxes" routerLink="/product/{{ product._id }}">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image" *ngIf="(product.productType == 'Boxes')"><img src = "../../assets/images/docCase.svg"></div>
+    <div mat-card-avatar class="example-header-image" *ngIf="(product.productType == 'Envelopes')"><img src = "../../assets/images/envelope.svg"></div>
+    <div mat-card-avatar class="example-header-image" *ngIf="(product.productType == 'Film')"><img src = "../../assets/images/film.svg"></div>
+    <div mat-card-avatar class="example-header-image" *ngIf="(product.productType == 'Folders')"><img src = "../../assets/images/folder.svg"></div>
+    <div mat-card-avatar class="example-header-image" *ngIf="(product.productType == 'Photos')"><img src = "../../assets/images/photo.svg"></div>
+    <div mat-card-avatar class="example-header-image" *ngIf="(product.productType == 'Other')"><img src = "../../assets/images/other.svg"></div>
+    <mat-card-title>{{ product.description }}</mat-card-title>
+    <mat-card-subtitle>Vendor: {{ product.vendor }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]= "product.imageUrl">
+  <mat-card-content>
+    <p>
+      <a [href]="product.productUrl">Go to vendor website</a>
+    </p>
+  </mat-card-content>
+</mat-card>

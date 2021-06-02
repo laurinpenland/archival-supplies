@@ -1,0 +1,35 @@
+<!--https://getbootstrap.com/docs/4.6/components/navbar/-->
+
+<nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
+  <a class="navbar-brand" href="#">Archival Products</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">All Products</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Product by Type
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/product-type/boxes">Boxes</a>
+          <a class="dropdown-item" routerLink="/product-type/envelopes">Envelopes</a>
+          <a class="dropdown-item" routerLink="/product-type/film">Film</a>
+          <a class="dropdown-item" routerLink="/product-type/folders">Folders</a>
+          <a class="dropdown-item" routerLink="/product-type/mylar">Mylar</a>
+          <a class="dropdown-item" routerLink="/product-type/photos">Photos</a>
+          <a class="dropdown-item" routerLink="/product-type/other">Other</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/add-product">Add Product</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

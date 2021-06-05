@@ -2,17 +2,12 @@ button {
   margin: 5px;
 }
 .details {
-  /*display: inline;*/
   grid-area: details;
 }
-/*app-product-card {
-  display: inline;
-}
-app-update-product-form {
-  display: inline;
-}*/
+
 .update {
   grid-area: update;
+  margin-bottom: 20px;
 }
 
 .wrapper {
@@ -25,4 +20,14 @@ app-update-product-form {
 
 h3, button {
   margin-left: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    display: inline-block;
+    width: 80%;
+  }
+  .update {
+    margin-top: 20px;
+  }
 }

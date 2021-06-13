@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ProductCardModule } from 'src/app/shared/product-card/product-card.module';
 import { IProduct } from 'src/app/core/products.model';
 import { ProductsService } from 'src/app/core/products.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { UpdateProductFormModule } from 'src/app/shared/update-product-form/update-product-form.module';
@@ -20,28 +20,15 @@ export class ProductDetailComponent implements OnInit {
   productId: string;
 
 
-  constructor(private route: ActivatedRoute, private ProductsService: ProductsService) {}
+  constructor(private route: ActivatedRoute, private ProductsService: ProductsService, private router: Router) {}
   selected: string;
 
   deleteProduct() {
     this.ProductsService.deleteProduct(this.productId);
+
+    this.router.navigate(['/thanks'], {skipLocationChange: true});
   }
-  /*submitForm() {
-    const product: IProduct = {
-      vendor: this.addProductForm.get('productVendor').value,
-      description: this.addProductForm.get('description').value,
-      productNum: this.addProductForm.get('productNum').value,
-      packQuantity: this.addProductForm.get('packQuantity').value,
-      productType: this.selected,
-      notes: this.addProductForm.get('notes').value,
-      productUrl: this.addProductForm.get('productUrl').value,
-      imageUrl: this.addProductForm.get('imageUrl').value
-    }
 
-    console.log(product);
-
-    this.productsService.addProduct(product);
-  }*/
     ngOnInit(): void {
         this.subscriptions = [
           this.route.params.subscribe(params => {

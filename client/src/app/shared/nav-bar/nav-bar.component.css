@@ -2,3 +2,6 @@ nav-item{
     padding:2px;
     margin-left: 7px;
 }
+.nav-link {
+  color: white !important;
+}

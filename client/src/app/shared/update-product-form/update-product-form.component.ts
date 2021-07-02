@@ -14,6 +14,7 @@ import { MatOptionModule } from '@angular/material/core';
 import { IProduct } from 'src/app/core/products.model';
 import { ProductsService } from 'src/app/core/products.service';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-product-form',
@@ -26,7 +27,7 @@ export class UpdateProductFormComponent implements OnInit {
   productId: string;
   //selected: string;
 
-  constructor(private ProductsService: ProductsService) { }
+  constructor(private ProductsService: ProductsService, private router: Router) { }
 
   ngOnInit(): void {
     this.updateProductForm = new FormGroup({
@@ -57,6 +58,8 @@ export class UpdateProductFormComponent implements OnInit {
     console.log(product);
 
     this.ProductsService.updateProduct(this.productId);
+
+    this.router.navigate(['/thanks'], {skipLocationChange: true});
   }
 
 

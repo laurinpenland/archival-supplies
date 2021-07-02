@@ -13,6 +13,7 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { IProduct } from 'src/app/core/products.model';
 import { ProductsService } from 'src/app/core/products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -21,7 +22,7 @@ import { ProductsService } from 'src/app/core/products.service';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductsService, private router: Router) {}
 
   addProductForm: FormGroup;
   selected: string;
@@ -54,6 +55,8 @@ export class AddProductComponent implements OnInit {
     console.log(product);
 
     this.productsService.addProduct(product);
+
+    this.router.navigate(['/thanks'], {skipLocationChange: true});
   }
 
 }

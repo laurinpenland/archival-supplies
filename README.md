@@ -1,6 +1,8 @@
 Created by: Laurin Penland
 Date: 5/5/2021
+
 Purpose: I created this for my capstone project for an advanced markup and scripting class. I used data about archival supplies from my job at the Rubenstein Library to populate the MongoDB database.
+
 
 To populate the mongo database, you can import the included csv file into mongo.
 1. In your terminal, navigate to to the project directory.
@@ -30,3 +32,5 @@ Unresolved problems and things I would like to improve as time allows:
 6. My api has some unused endpoints.
 7. I still need to make an svg image for the mylar avatar.
 10. I would like to add an error route and perhaps an about view.
+
+

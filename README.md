@@ -24,7 +24,7 @@ To start the client:
     $ npm start
 
 Unresolved problems and things I would like to improve as time allows:
-1. I would like to disable the form submit form field unless the form is valid.
+1. There is a problem with displaying new items to the database when sorting by product type.
 2. I would like for the forms to be more user friendly. I had hoped to add more interaction and messages when the user clicked on the submit, update, and delete buttons.
 3. I'm not sure that I should be using ngModel to pre-fill my updateProductForm, but it works?
 4. I had originally planned for the database to have more collections. I would like to have more control over data, especially product type.
@@ -32,5 +32,3 @@ Unresolved problems and things I would like to improve as time allows:
 6. My api has some unused endpoints.
 7. I still need to make an svg image for the mylar avatar.
 10. I would like to add an error route and perhaps an about view.
-
-

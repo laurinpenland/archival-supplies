@@ -32,7 +32,7 @@ export class AddProductComponent implements OnInit {
       description: new FormControl("", [Validators.required]),
       productNum: new FormControl("", [Validators.required]),
       packQuantity: new FormControl("", [Validators.required]),
-      productType: new FormControl("", [Validators.required]),
+      productType: new FormControl("null", [Validators.required]),
       notes: new FormControl("", [Validators.maxLength(150)]),
       productUrl: new FormControl("", [Validators.required]),
       imageUrl: new FormControl("")
